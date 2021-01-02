@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>newspipe</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+
+    <div id="lead">
+        <div id="lead-content">
+            <h1>NewsPipe</h1>
+        </div>
+        <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">About NewsPipe</h2>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        NewsPipe is a complete ecosystem for training and deploying GPT-2. It includes many comprehensive tools, which you can use for many other use cases too.
+                    </p>
+                    <img src="images/architecture.png"/>                    
+                    <p>
+                        The idea is to have a continuous learning pipeline for GPT-2. The developers defines some news sources with a simple link and start their crawling jobs. Each crawler stores the crawled news articles in a MongoDB. The GPT-2 training pipeline gets all articles from the MongoDB and trains a model on them. Each trained model is stored in a MLFlow model registry, where a Data Scientist can define the state of a model. When a model is in production state, it is retrieved by our GPT-2 service and used for text generation. The service can be used with a React application.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Tools</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <!-- End .project-image -->
+                    <div class="project-image">
+                        <h2>newscrawler</h1>
+                    </div>
+                    <div class="project-info">
+                        <p>A generic news article crawling and information extracting python libary. It utilities popular frameworks newspaper3k, goose and request for extracing the article text. Other informations like title, author, … are extracted from the RSS feed.                        </p>
+                        <a href="https://github.com/NewsPipe/newscrawler">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <!-- End .project-image -->
+                    <div class="project-image">
+                        <h2>newspipe</h2>
+                    </div>
+                    <div class="project-info">
+                        <p>A scalable news article crawling and information extracting system built on top of Apache-Airflow and newscrawler. You can manage your job with the built in dashboard, run the whole system on a Celery cluster or on your server and add news sources by just simply providing a link to the RSS feed or website.</p>
+                        <a href="https://github.com/NewsPipe/newspipe">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+
+                <div class="project shadow-large">
+                    <!-- End .project-image -->
+                    <div class="project-image">
+                        <h2>GPT2 TFX Pipeline</h2>
+                    </div>
+                    <div class="project-info">
+                        <p>A complete end-end production-ready pipeline for GPT-2 based on Googles framework TensorflowExtended. It includes training from scatch and finetuning from the OpenAI trained models. The data can be loaded from a MongoDB or a file on your local file system. This can also be extended to any data source you need. Training can then be monitored with Tensorboard and trained models can be pushed automatically to a MLFlow model regristy.
+                        </p>
+                        <a href="https://github.com/NewsPipe/gpt2-tfx-pipeline">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+
+
+                <div class="project shadow-large">
+                    <!-- End .project-image -->
+                    <div class="project-image">
+                        <h2>newspipe</h2>
+                    </div>
+                    <div class="project-info">
+                        <p>The complete code for running a encrypted MLFlow server for tracking your models and experiments on your server.                        </p>
+                        <a href="https://github.com/NewsPipe/mlflow-server">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+
+                <div class="project shadow-large">
+                    <!-- End .project-image -->
+                    <div class="project-image">
+                        <h2>newsgen</h2>
+                    </div>
+                    <div class="project-info">
+                        <p>The web application for generating German newspaper articles. It consists of a React frontend and the Scala Play service for GPT-2.                        
+                        <a href="https://github.com/NewsPipe/newsgen">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2020 NewsPipe
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/" target="https://github.com/NewsPipe"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+</body>
+
+</html>
